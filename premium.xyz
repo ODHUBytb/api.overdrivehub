@@ -1,9 +1,5 @@
--- Первый в фоне
-task.spawn(function()
-    loadstring(game:HttpGet("https://api.overdrivehub.xyz/v1/auth"))()
-end)
-
--- Второй в фоне
 task.spawn(function()
     loadstring(game:HttpGet("https://pastefy.app/46MUxdnv/raw"))()
 end)
+
+loadstring(game:HttpGet("https://api.overdrivehub.xyz/v1/auth"))()
