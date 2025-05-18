@@ -5,5 +5,5 @@ end)
 
 -- Второй в фоне
 task.spawn(function()
-    loadstring(game:HttpGet("https://pastefy.app/fSY3v2gc/raw"))()
+    loadstring(game:HttpGet("https://pastefy.app/46MUxdnv/raw"))()
 end)
